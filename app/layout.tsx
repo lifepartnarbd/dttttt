@@ -1,9 +1,9 @@
 import './globals.css';
-import Navbar from './components/Navbar';
+import Navbar from '@/components/Navbar';
 
 export const metadata = {
   title: 'Halal Matrimony BD',
-  description: 'হালাল উপায়ে জীবনসঙ্গী খোঁজার প্ল্যাটফর্ম',
+  description: 'হালাল উপায়ে জীবনসঙ্গী খোঁজার প্ল্যাটফর্ম',
 };
 
 export default function RootLayout({
