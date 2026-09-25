@@ -1,5 +1,6 @@
 import './globals.css';
 import Navbar from '@/components/Navbar';
+import { AuthProvider } from '@/contexts/AuthContext';
 
 export const metadata = {
   title: 'Halal Matrimony BD',
@@ -14,10 +15,12 @@ export default function RootLayout({
   return (
     <html lang="bn">
       <body className="bg-gray-50 text-gray-900 antialiased font-sans">
-        <Navbar /> {/* মেন্যুটি এখানে যুক্ত করা হলো */}
-        <main className="min-h-screen">
-          {children}
-        </main>
+        <AuthProvider>
+          <Navbar />
+          <main className="min-h-screen">
+            {children}
+          </main>
+        </AuthProvider>
       </body>
     </html>
   );
