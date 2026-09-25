@@ -13,8 +13,17 @@ type SignupData = {
   guardian_phone: string;
 };
 
+type Profile = {
+  id: string;
+  full_name: string;
+  gender: string;
+  custom_id: string;
+  phone: string;
+};
+
 type AuthContextType = {
   user: User | null;
+  profile: Profile | null;
   loading: boolean;
   signUp: (data: SignupData) => Promise<{ error: string | null }>;
   signIn: (email: string, password: string) => Promise<{ error: string | null }>;
@@ -25,18 +34,32 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
+  const [profile, setProfile] = useState<Profile | null>(null);
   const [loading, setLoading] = useState(true);
 
+  const loadProfile = async (userId: string) => {
+    const { data } = await supabase
+      .from('profiles')
+      .select('id, full_name, gender, custom_id, phone')
+      .eq('id', userId)
+      .single();
+    setProfile(data ?? null);
+  };
+
   useEffect(() => {
-    // প্রথমে current session চেক করা
     supabase.auth.getSession().then(({ data: { session } }) => {
       setUser(session?.user ?? null);
+      if (session?.user) loadProfile(session.user.id);
       setLoading(false);
     });
 
-    // পরবর্তীতে login/logout হলে state আপডেট হবে
     const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
       setUser(session?.user ?? null);
+      if (session?.user) {
+        loadProfile(session.user.id);
+      } else {
+        setProfile(null);
+      }
     });
 
     return () => {
@@ -70,7 +93,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <AuthContext.Provider value={{ user, loading, signUp, signIn, signOut }}>
+    <AuthContext.Provider value={{ user, profile, loading, signUp, signIn, signOut }}>
       {children}
     </AuthContext.Provider>
   );
