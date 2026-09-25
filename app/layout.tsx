@@ -1,9 +1,9 @@
-import type { Metadata } from 'next';
 import './globals.css';
+import Navbar from './components/Navbar';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Halal Matrimony BD',
-  description: 'হালাল ও শরিয়াহ-সম্মত ইসলামিক ম্যাট্রিমনি প্ল্যাটফর্ম',
+  description: 'হালাল উপায়ে জীবনসঙ্গী খোঁজার প্ল্যাটফর্ম',
 };
 
 export default function RootLayout({
@@ -13,7 +13,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="bn">
-      <body className="bg-gray-50 text-gray-900 antialiased">{children}</body>
+      <body className="bg-gray-50 text-gray-900 antialiased font-sans">
+        <Navbar /> {/* মেন্যুটি এখানে যুক্ত করা হলো */}
+        <main className="min-h-screen">
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
