@@ -9,8 +9,6 @@ type SignupData = {
   password: string;
   full_name: string;
   gender: 'male' | 'female';
-  phone: string;
-  guardian_phone: string;
 };
 
 type Profile = {
@@ -18,7 +16,6 @@ type Profile = {
   full_name: string;
   gender: string;
   custom_id: string;
-  phone: string;
 };
 
 type AuthContextType = {
@@ -40,7 +37,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const loadProfile = async (userId: string) => {
     const { data } = await supabase
       .from('profiles')
-      .select('id, full_name, gender, custom_id, phone')
+      .select('id, full_name, gender, custom_id')
       .eq('id', userId)
       .single();
     setProfile(data ?? null);
@@ -75,8 +72,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         data: {
           full_name: formData.full_name,
           gender: formData.gender,
-          phone: formData.phone,
-          guardian_phone: formData.guardian_phone,
         },
       },
     });
