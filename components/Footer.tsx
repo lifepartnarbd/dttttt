@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
 
           <div>
-            <h3 className="text-emerald-400 text-xl font-bold mb-3">Halal Matrimony</h3>
+            <h3 className="text-emerald-400 text-xl font-bold mb-3">Life Partner BD</h3>
             <p className="text-sm text-gray-400 leading-relaxed">
               পর্দা ও বিশ্বস্ততার সাথে জীবনসঙ্গী খুঁজে নেওয়ার একটি সম্পূর্ণ শরিয়াহ সম্মত ম্যাট্রিমোনিয়াল প্ল্যাটফর্ম।
             </p>
@@ -61,7 +61,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-10 pt-6 text-center text-xs text-gray-500">
-          Halal Matrimony. সর্বস্বত্ব সংরক্ষিত।
+          Life Partner BD. সর্বস্বত্ব সংরক্ষিত।
         </div>
       </div>
     </footer>
