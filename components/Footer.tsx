@@ -7,7 +7,6 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
 
-          {/* লোগো ও সংক্ষিপ্ত বিবরণ */}
           <div>
             <h3 className="text-emerald-400 text-xl font-bold mb-3">Halal Matrimony</h3>
             <p className="text-sm text-gray-400 leading-relaxed">
@@ -15,7 +14,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* প্রয়োজনীয় লিংক */}
           <div>
             <h4 className="text-white font-semibold mb-3">প্রয়োজনীয় লিংক</h4>
             <ul className="space-y-2 text-sm">
@@ -26,7 +24,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* পলিসি */}
           <div>
             <h4 className="text-white font-semibold mb-3">পলিসি ও শর্তাবলী</h4>
             <ul className="space-y-2 text-sm">
@@ -35,7 +32,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* যোগাযোগ */}
           <div>
             <h4 className="text-white font-semibold mb-3">যোগাযোগ</h4>
             <ul className="space-y-3 text-sm">
@@ -49,12 +45,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <MessageCircle className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                
-                  href="https://wa.me/8801618699125"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-emerald-400"
-                >
+                <a href="https://wa.me/8801618699125" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400">
                   WhatsApp: 01618699125
                 </a>
               </li>
@@ -70,7 +61,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-10 pt-6 text-center text-xs text-gray-500">
-          © {new Date().getFullYear()} Halal Matrimony. সর্বস্বত্ব সংরক্ষিত।
+          Halal Matrimony. সর্বস্বত্ব সংরক্ষিত।
         </div>
       </div>
     </footer>
