@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import { AuthProvider } from '@/contexts/AuthContext';
 
 export const metadata = {
-  title: 'Halal Matrimony BD',
+  title: 'Life Partner BD',
   description: 'হালাল উপায়ে জীবনসঙ্গী খোঁজার প্ল্যাটফর্ম',
 };
 
