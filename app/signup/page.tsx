@@ -17,8 +17,6 @@ export default function SignupPage() {
     gender: 'male' as 'male' | 'female',
     email: '',
     password: '',
-    phone: '',
-    guardian_phone: '',
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -105,35 +103,6 @@ export default function SignupPage() {
               onChange={handleChange}
               className="w-full border rounded-lg p-2.5 text-sm bg-gray-50"
             />
-          </div>
-
-          <div>
-            <label className="block text-xs font-medium text-gray-700 mb-1">আপনার মোবাইল নম্বর</label>
-            <input
-              type="tel"
-              name="phone"
-              required
-              placeholder="01XXXXXXXXX"
-              value={formData.phone}
-              onChange={handleChange}
-              className="w-full border rounded-lg p-2.5 text-sm bg-gray-50"
-            />
-          </div>
-
-          <div className="bg-amber-50 p-3 rounded-lg border border-amber-200">
-            <label className="block text-xs font-medium text-amber-900 mb-1">
-              অভিভাবকের মোবাইল নম্বর
-            </label>
-            <input
-              type="tel"
-              name="guardian_phone"
-              required
-              placeholder="01XXXXXXXXX"
-              value={formData.guardian_phone}
-              onChange={handleChange}
-              className="w-full border border-amber-300 rounded-lg p-2.5 text-sm bg-white"
-            />
-            <p className="text-[11px] text-amber-800 mt-1">এই নম্বর সরাসরি পাবলিক দেখাবে না</p>
           </div>
 
           <button
