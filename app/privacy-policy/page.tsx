@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'গোপনীয়তা নীতি | Halal Matrimony',
+  title: 'গোপনীয়তা নীতি | Life Partner BD',
 };
 
 export default function PrivacyPolicyPage() {
@@ -11,7 +11,7 @@ export default function PrivacyPolicyPage() {
       <div className="prose prose-emerald max-w-none space-y-6 text-gray-700 text-sm leading-relaxed">
 
         <p>
-          Halal Matrimony একটি সম্পূর্ণ শরিয়াহভিত্তিক ম্যাট্রিমোনিয়াল প্ল্যাটফর্ম, যেখানে সত্যিকারের দ্বীনদার পাত্র-পাত্রীরা
+          Life Partner BD একটি সম্পূর্ণ শরিয়াহভিত্তিক ম্যাট্রিমোনিয়াল প্ল্যাটফর্ম, যেখানে সত্যিকারের দ্বীনদার পাত্র-পাত্রীরা
           অভিভাবকের সম্মতিক্রমে হালাল পন্থায় জীবনসঙ্গী খুঁজে নিতে পারেন। আপনার তথ্যের নিরাপত্তা ও গোপনীয়তা আমাদের কাছে অত্যন্ত গুরুত্বপূর্ণ।
         </p>
 
