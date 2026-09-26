@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'শর্তাবলী | Halal Matrimony',
+  title: 'শর্তাবলী | Life Partner BD',
 };
 
 export default function TermsPage() {
@@ -11,7 +11,7 @@ export default function TermsPage() {
       <div className="prose prose-emerald max-w-none space-y-6 text-gray-700 text-sm leading-relaxed">
 
         <p>
-          Halal Matrimony ব্যবহারের মাধ্যমে আপনি নিচের শর্তাবলীতে সম্মত হচ্ছেন। এই প্ল্যাটফর্মটি শুধুমাত্র বৈধভাবে
+          Life Partner BD ব্যবহারের মাধ্যমে আপনি নিচের শর্তাবলীতে সম্মত হচ্ছেন। এই প্ল্যাটফর্মটি শুধুমাত্র বৈধভাবে
           বিবাহে ইচ্ছুক দ্বীনদার মুসলিম পাত্র-পাত্রীদের জন্য তৈরি — বিনোদন বা ক্যাজুয়াল পরিচয়ের জন্য নয়।
         </p>
 
@@ -59,7 +59,7 @@ export default function TermsPage() {
         <section>
           <h2 className="text-xl font-semibold text-gray-900 mb-2">৫. দায়বদ্ধতা</h2>
           <p>
-            Halal Matrimony শুধুমাত্র পরিচয় করিয়ে দেওয়ার একটি মাধ্যম। এখানে যোগাযোগের ফলে সংঘটিত কোনো সম্পর্ক বা
+            Life Partner BD শুধুমাত্র পরিচয় করিয়ে দেওয়ার একটি মাধ্যম। এখানে যোগাযোগের ফলে সংঘটিত কোনো সম্পর্ক বা
             বিবাহ সংক্রান্ত সিদ্ধান্তের দায়ভার সম্পূর্ণভাবে সংশ্লিষ্ট ব্যক্তিদের নিজস্ব।
           </p>
         </section>
